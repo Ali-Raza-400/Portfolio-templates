@@ -1,0 +1,3 @@
+Here is the online documentation for Glint WordPress Theme.
+
+Documentation Link: https://quomodosoft.com/docs/docs/glint/

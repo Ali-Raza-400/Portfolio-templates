@@ -1,0 +1,13 @@
+Version 4.0.0 - August 22, 2023
+---------------------------------------
++ UPDATE: Glint Extra Plugin Update 
++ FIX: Glint Extra Plugin Video Embed Issue Fixing
+- Elementsready Latest Version Compatibility
+- Elementor Pro Compatibility.
+- Elementor Latest Version Compatability 
+- WooCommerce Latest Version Compatability 
+- WordPress Latest Version Compatability
+- Tweaking Model Video Js & update 
+- Tweaking Css & Js Files
+- Optimized Css & Js Files
+- Speed Optimization 

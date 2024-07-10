@@ -1,0 +1,813 @@
+{
+    "manifest_version": "1.0.20",
+    "title": "Portohero",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Process",
+            "screenshot": "screenshots\/process.jpg",
+            "source": "templates\/process.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/process\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Work Details",
+            "screenshot": "screenshots\/work-details.jpg",
+            "source": "templates\/work-details.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/work-details\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Testimonials",
+            "screenshot": "screenshots\/testimonials.jpg",
+            "source": "templates\/testimonials.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/testimonials\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Pricing",
+            "screenshot": "screenshots\/pricing.jpg",
+            "source": "templates\/pricing.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/pricing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Works",
+            "screenshot": "screenshots\/works.jpg",
+            "source": "templates\/works.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/works\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Services",
+            "screenshot": "screenshots\/services.jpg",
+            "source": "templates\/services.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/services\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About",
+            "screenshot": "screenshots\/about.jpg",
+            "source": "templates\/about.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/about\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/template-kit\/home\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Error 404",
+            "screenshot": "screenshots\/error-404.jpg",
+            "source": "templates\/error-404.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/?elementor_library=error-404",
+            "type": "error-404",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "error-404",
+                "elementor_pro_conditions": [
+                    "include\/singular\/not_found404"
+                ],
+                "additional_template_information": [
+                    "This is a \"Error 404\" template for Elementor Pro.",
+                    "This template will display on: 404 Page."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/?elementor_library=footer",
+            "type": "footer",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "footer",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Footer\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/template-kit.rootlayers.com\/portohero\/?elementor_library=header",
+            "type": "header",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "header",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Header\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor Pro",
+            "version": "3.3.3",
+            "file": "elementor-pro\/elementor-pro.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": [
+        {
+            "filename": "05.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/05-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/process.json",
+                    "name": "Process"
+                },
+                {
+                    "source": "templates\/works.json",
+                    "name": "Works"
+                }
+            ],
+            "filesize": 69394,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "icon_22.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_22.png",
+            "templates": [
+                {
+                    "source": "templates\/process.json",
+                    "name": "Process"
+                }
+            ],
+            "filesize": 2301,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_32.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_32.png",
+            "templates": [
+                {
+                    "source": "templates\/process.json",
+                    "name": "Process"
+                }
+            ],
+            "filesize": 1591,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_18.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_18.png",
+            "templates": [
+                {
+                    "source": "templates\/process.json",
+                    "name": "Process"
+                }
+            ],
+            "filesize": 2219,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_13.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_13.png",
+            "templates": [
+                {
+                    "source": "templates\/process.json",
+                    "name": "Process"
+                }
+            ],
+            "filesize": 1196,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "01.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/01-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/work-details.json",
+                    "name": "Work Details"
+                },
+                {
+                    "source": "templates\/testimonials.json",
+                    "name": "Testimonials"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                }
+            ],
+            "filesize": 72292,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "ruma.jpeg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/ruma-800x533.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/work-details.json",
+                    "name": "Work Details"
+                },
+                {
+                    "source": "templates\/works.json",
+                    "name": "Works"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 111431,
+            "dimensions": [
+                1370,
+                913
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "campusa.jpeg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/campusa-800x533.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/work-details.json",
+                    "name": "Work Details"
+                },
+                {
+                    "source": "templates\/works.json",
+                    "name": "Works"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 108989,
+            "dimensions": [
+                1370,
+                913
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-8G4T5RV"
+        },
+        {
+            "filename": "lapar.jpeg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/lapar-800x533.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/work-details.json",
+                    "name": "Work Details"
+                },
+                {
+                    "source": "templates\/works.json",
+                    "name": "Works"
+                },
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 74474,
+            "dimensions": [
+                1170,
+                780
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-BS9WTY8"
+        },
+        {
+            "filename": "team22.jpg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/team22.jpg",
+            "templates": [
+                {
+                    "source": "templates\/testimonials.json",
+                    "name": "Testimonials"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 26646,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-LXVSPXR"
+        },
+        {
+            "filename": "team23.jpg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/team23.jpg",
+            "templates": [
+                {
+                    "source": "templates\/testimonials.json",
+                    "name": "Testimonials"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 78247,
+            "dimensions": [
+                500,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-LXVSPXR"
+        },
+        {
+            "filename": "02.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/02-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/error-404.json",
+                    "name": "Error 404"
+                }
+            ],
+            "filesize": 70198,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "icon_44.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_44.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                }
+            ],
+            "filesize": 1833,
+            "dimensions": [
+                64,
+                61
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_42.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_42.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                }
+            ],
+            "filesize": 1960,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_6.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_6.png",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                }
+            ],
+            "filesize": 1481,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "06.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/06-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                }
+            ],
+            "filesize": 65186,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "03.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/03-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 68189,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "icon_16.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_16.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 2395,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_24.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_24.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 768,
+            "dimensions": [
+                66,
+                66
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_30.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_30.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 1973,
+            "dimensions": [
+                64,
+                60
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_11.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_11.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 1483,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_41.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_41.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 1840,
+            "dimensions": [
+                62,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "icon_39.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_39.png",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 2535,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "confident-fashion-designer-3QGU36P.jpeg",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/confident-fashion-designer-3QGU36P.jpeg",
+            "templates": [
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 44859,
+            "dimensions": [
+                498,
+                697
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-3QGU36P"
+        },
+        {
+            "filename": "icon_29.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/icon_29.png",
+            "templates": [
+                {
+                    "source": "templates\/about.json",
+                    "name": "About"
+                }
+            ],
+            "filesize": 2190,
+            "dimensions": [
+                64,
+                64
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-4YJTZ5W"
+        },
+        {
+            "filename": "09.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/09-800x533.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 155478,
+            "dimensions": [
+                1200,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-XF67HL"
+        },
+        {
+            "filename": "LOGO.png",
+            "thumbnail_url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/LOGO.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 2695,
+            "dimensions": [
+                195,
+                33
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/LOGO.png"
+        }
+    ]
+}

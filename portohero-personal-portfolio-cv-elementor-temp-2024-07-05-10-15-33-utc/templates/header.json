@@ -1,0 +1,186 @@
+{
+    "version": "0.4",
+    "title": "Header",
+    "type": "header",
+    "metadata": {
+        "template_type": "section-header",
+        "include_in_zip": "1",
+        "elementor_pro_required": "1",
+        "elementor_library_type": "header",
+        "elementor_pro_conditions": [
+            "include\/general"
+        ],
+        "additional_template_information": [
+            "This is a \"Header\" template for Elementor Pro.",
+            "This template will display on: Entire Site."
+        ],
+        "wp_page_template": "default"
+    },
+    "content": [
+        {
+            "id": "64ba981a",
+            "settings": {
+                "height": "min-height",
+                "custom_height": {
+                    "unit": "px",
+                    "size": 100,
+                    "sizes": []
+                },
+                "structure": "34",
+                "background_background": "classic",
+                "__globals__": {
+                    "background_color": "globals\/colors?id=2c09f85"
+                },
+                "layout": "full_width",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "40",
+                    "bottom": "0",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "10",
+                    "bottom": "0",
+                    "left": "10",
+                    "isLinked": false
+                },
+                "content_position": "middle"
+            },
+            "elements": [
+                {
+                    "id": "340720a8",
+                    "settings": {
+                        "_column_size": 16,
+                        "_inline_size": null,
+                        "_inline_size_tablet": 20,
+                        "_inline_size_mobile": 50
+                    },
+                    "elements": [
+                        {
+                            "id": "562d6dad",
+                            "settings": {
+                                "image": {
+                                    "url": "https:\/\/template-kit.rootlayers.com\/portohero\/wp-content\/uploads\/sites\/33\/2021\/09\/LOGO.png",
+                                    "id": 28,
+                                    "alt": "",
+                                    "source": "library"
+                                },
+                                "align": "left"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "image",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                },
+                {
+                    "id": "67cf9552",
+                    "settings": {
+                        "_column_size": 66,
+                        "_inline_size": 70.219,
+                        "_inline_size_tablet": 60,
+                        "_inline_size_mobile": 50
+                    },
+                    "elements": [
+                        {
+                            "id": "663cd097",
+                            "settings": {
+                                "align_items": "right",
+                                "pointer": "none",
+                                "submenu_icon": {
+                                    "value": "fas fa-angle-down",
+                                    "library": "fa-solid"
+                                },
+                                "full_width": "stretch",
+                                "toggle_align": "right",
+                                "__globals__": {
+                                    "color_menu_item": "globals\/colors?id=text",
+                                    "color_menu_item_hover": "globals\/colors?id=primary",
+                                    "menu_typography_typography": "globals\/typography?id=71097bf",
+                                    "background_color_dropdown_item": "globals\/colors?id=091107e",
+                                    "color_dropdown_item": "globals\/colors?id=text",
+                                    "dropdown_typography_typography": "globals\/typography?id=71097bf",
+                                    "color_menu_item_active": "globals\/colors?id=primary",
+                                    "color_dropdown_item_hover": "globals\/colors?id=primary",
+                                    "background_color_dropdown_item_hover": "globals\/colors?id=2c09f85",
+                                    "color_dropdown_item_active": "globals\/colors?id=primary",
+                                    "background_color_dropdown_item_active": "globals\/colors?id=2c09f85",
+                                    "toggle_color": "globals\/colors?id=a36467e",
+                                    "toggle_color_hover": "globals\/colors?id=primary",
+                                    "toggle_background_color": "globals\/colors?id=091107e"
+                                },
+                                "color_menu_item": "#777777",
+                                "color_menu_item_hover": "#FFFFFF",
+                                "menu_space_between": {
+                                    "unit": "px",
+                                    "size": 4,
+                                    "sizes": []
+                                },
+                                "color_dropdown_item": "#777777",
+                                "padding_horizontal_dropdown_item": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "padding_vertical_dropdown_item": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "dropdown_top_distance_mobile": {
+                                    "unit": "px",
+                                    "size": 20,
+                                    "sizes": []
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "nav-menu",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                },
+                {
+                    "id": "69090ba8",
+                    "settings": {
+                        "_column_size": 16,
+                        "_inline_size": 12.436,
+                        "_inline_size_tablet": 20,
+                        "hide_mobile": "hidden-phone"
+                    },
+                    "elements": [
+                        {
+                            "id": "3f9ca90e",
+                            "settings": {
+                                "text": "Hire Me",
+                                "align": "right",
+                                "selected_icon": {
+                                    "value": "far fa-paper-plane",
+                                    "library": "fa-regular"
+                                },
+                                "icon_align": "right"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "button",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}
