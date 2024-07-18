@@ -1,0 +1,2789 @@
+@charset "utf-8";
+
+/*	Copyright (c) 2022 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+
+
+01)	MERS BASE
+02) MERS MOBILE MENU
+03) MERS LEFTPART
+04) MERS HERO HEADER
+05) MERS ABOUT
+06) MERS SERVICE
+07) MERS PARTNERS
+08) MERS PORTFOLIO
+09) MERS SKILLS
+10) MERS PRICING
+11) MERS TESTIMONIALS
+12) MERS NEWS
+13) MERS CONTACT
+14) MERS MAGIC CURSOR
+15) MERS MEDIA QUERIES (FOR SMALL DEVIVES)
+
+
+/*---------------------------------------------------*/
+/*	01) MERS BASE
+/*---------------------------------------------------*/
+
+a{
+	text-decoration: none;
+}
+:root{
+    --main-color: #988C86;
+    --extra-color: #DF5646;
+    --font-family: 'Inter', sans-serif;
+    --font-family-extra: 'Playfair Display', serif;;
+}
+.colored{
+	color: var(--extra-color);
+}
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	overflow-x: hidden;
+	width: 100%;
+	font-family: var(--font-family);
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #fff;
+	color: var(--main-color);
+}
+
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body{
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+}
+body:-webkit-scrollbar-track {
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 6px;
+  border: 3px solid #fff;
+}
+
+.container{
+	max-width: 1250px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	padding:0px 40px;
+	position:relative;
+	clear:both;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:500;
+	line-height: 1.3;
+	font-family: var(--font-family-extra);
+	color: #202020;
+}
+
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+.mers_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.mers_tm_all_wrap,
+.mers_tm_all_wrap *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+}
+#preloader:before,
+#preloader:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+#preloader:after{
+    left: auto;
+    right: 0;
+}
+#preloader .loader_line{
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+.loader_line:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #fff;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+.loader_line:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #999999;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms;
+}
+
+@keyframes lineheight{
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes lineround{
+    0%{
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100%{
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+}
+
+/*hiding all*/
+.preloaded .loader_line:after{
+    opacity: 0;
+}
+.preloaded  .loader_line{
+    opacity: 0;
+    height: 100%!important;
+}
+.preloaded:before,
+.preloaded:after{
+    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+@keyframes preloadedzero{
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+.mers_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+
+/*---------------------------------------------------*/
+/*	02) MERS MOBILE MENU
+/*---------------------------------------------------*/
+
+.mers_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.mers_tm_mobile_menu .mobile_menu_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding: 10px 20px 10px 20px;
+}
+.mers_tm_mobile_menu .mobile_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mers_tm_mobile_menu .mobile_in .logo img{
+	max-width: 90px;
+	max-height: 70px;
+}
+.mers_tm_mobile_menu .trigger{
+	line-height: 0;
+}
+.mers_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	display: none;
+}
+.mers_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 20px;
+}
+.mers_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.mers_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #202020;
+	display: inline-block;
+	padding: 0px 0px;
+	font-weight: 500;
+	font-family: var(--font-family-extra);
+}
+.mers_tm_mobile_menu .hamburger-inner, 
+.mers_tm_mobile_menu .hamburger-inner:after, 
+.mers_tm_mobile_menu .hamburger-inner:before{
+	width: 30px;
+	height: 2px;
+}
+.mers_tm_mobile_menu .hamburger-box{
+	width: 30px;
+}
+.mers_tm_mobile_menu .hamburger{
+	padding: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	03) MERS LEFTPART
+/*---------------------------------------------------*/
+
+.mers_tm_leftpart{
+	width: 300px;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	border-right: 1px solid rgba(223,86,70,.1);
+}
+.mers_tm_leftpart .leftpart_inner{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	padding: 40px;
+}
+.mers_tm_leftpart .logo{
+	display: inline-block;
+	margin-bottom: 100px;
+}
+.mers_tm_leftpart .logo img{
+	max-width: 190px;
+	max-height: 120px;
+}
+.mers_tm_leftpart .menu{
+	width: 100%;
+	float: left;
+}
+.mers_tm_leftpart .menu ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_leftpart .menu ul li{
+	margin: 0px 0px 30px 0px;
+	width: 100%;
+	float: left;
+}
+.mers_tm_leftpart .menu ul li:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_leftpart .menu ul li a{
+	padding: 5px 0px;
+	display: inline-block;
+	color: #202020;
+	font-weight: 500;
+	font-family: var(--font-family-extra);
+	position: relative;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_leftpart .menu ul li.current a{
+	color: var(--extra-color);
+	padding-left: 45px;
+}
+.mers_tm_leftpart .menu ul li.current a:before{
+	width: 30px;
+}
+.mers_tm_leftpart .menu ul li a:before{
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 1px;
+	background-color: var(--extra-color);
+	left: 0px;
+	bottom: 10px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_leftpart .menu ul li a:hover{
+	color: var(--extra-color);
+	padding-left: 45px;
+}
+.mers_tm_leftpart .menu ul li a:hover:before{
+	width: 30px;
+}
+.mers_tm_leftpart .subscribe_wrap{
+	width: 100%;
+	float: left;
+	border-top: 1px solid rgba(32,32,32,.07);
+	padding-top: 52px;
+	margin-top: 30px;
+}
+.mers_tm_leftpart .subscribe_wrap .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 19px;
+}
+.mers_tm_leftpart .subscribe_wrap .title h3{
+	font-weight: 400;
+	font-size: 24px;
+}
+.mers_tm_subscribe{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.mers_tm_subscribe .sub_form{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.mers_tm_subscribe input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	padding: 0px;
+	font-size: 14px;
+	color: #202020;
+	padding-right: 40px;
+	position: relative;
+	border-bottom: 1px solid rgba(32, 32, 32,.07);
+	padding-bottom: 12px;
+}
+.mers_tm_subscribe input:focus{
+	outline: none;
+	background: transparent;
+	border-bottom: 1px solid rgba(32, 32, 32,.3);
+}
+.mers_tm_subscribe a{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0px;
+	margin-top: 2px;
+}
+.mers_tm_subscribe .svg{
+	width: 22px;
+	height: 22px;
+}
+.mers_tm_subscribe ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+   color: rgba(152, 140, 134, 0.6);
+}
+.mers_tm_subscribe :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: rgba(152, 140, 134, 0.6);
+   opacity:  1;
+}
+.mers_tm_subscribe ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: rgba(152, 140, 134, 0.6);
+   opacity:  1;
+}
+.mers_tm_subscribe :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgba(152, 140, 134, 0.6);
+}
+.mers_tm_subscribe ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgba(152, 140, 134, 0.6);
+}
+.mers_tm_subscribe ::placeholder { /* Most modern browsers support this now. */
+   color: rgba(152, 140, 134, 0.6);
+}
+.mers_tm_subscribe .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_subscribe .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_subscribe .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_leftpart .copyright{
+	position: absolute;
+	bottom: 40px;
+}
+.mers_tm_leftpart .copyright p{
+	font-family: var(--font-family-extra);
+}
+.mers_tm_leftpart .copyright a{
+	color: #202020;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_leftpart .copyright a:hover{
+	color: var(--extra-color);
+}
+
+/*---------------------------------------------------*/
+/*	04) MERS HERO HEADER
+/*---------------------------------------------------*/
+
+.mers_tm_rightpart{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-left: 300px;
+}
+.mers_tm_rightpart .rightpart_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_hero{
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.mers_tm_hero .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.mers_tm_hero .background .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.mers_tm_hero .background .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+/*	background-color: rgba(0,0,0,.3);*/
+	z-index: 1;
+}
+.mers_tm_hero .container{
+	z-index: 2;
+}
+.mers_tm_hero .content{
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	position: relative;
+}
+.mers_tm_hero .content .in{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.mers_tm_hero .hello{
+	display: inline-block;
+	color: var(--extra-color);
+	font-size: 32px;
+}
+.mers_tm_hero .name{
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 25px;
+}
+.mers_tm_hero .text{
+	font-size: 32px;
+	margin-bottom: 57px;
+}
+.mers_tm_button{
+	width: 100%;
+	float: left;
+}
+.mers_tm_button a{
+	background-color: var(--extra-color);
+	float: left;
+	display: flex;
+	align-items: center;
+	padding: 22px 30px 22px 50px;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 5px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_button a:hover{
+	background-color: #202020;
+}
+.mers_tm_contact .mers_tm_button a:hover{
+	background-color: #fff;
+	color: #202020;
+}
+.mers_tm_button .icon{
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background-color: #CE3E2D;
+	border-radius: 100%;
+	position: relative;
+	margin-left: 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_button .icon .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin-top: 4px;
+	margin-left: 1px;
+	width: 30px;
+	height: 30px;
+}
+.mers_tm_down{
+	position: absolute;
+	left: 0px;
+	bottom: 5%;
+}
+.mers_tm_down svg{
+	width: 64px !important;
+	height: 64px !important;
+}
+.mers_tm_down svg #wheel{
+	animation: scroll ease 2s infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(60px);
+    }
+}
+
+/*---------------------------------------------------*/
+/*	05) MERS ABOUT
+/*---------------------------------------------------*/
+
+.mers_tm_about{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 90px;
+	padding-top: 100px;
+}
+.mers_tm_about .about_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	margin-bottom: 120px;
+}
+.mers_tm_about .left{
+	width: 50%;
+	padding-right: 30px;
+}
+.mers_tm_about .left img{
+	min-width: 100%;
+	max-height: 600px;
+	z-index: 1;
+	position: relative;
+}
+.mers_tm_title{
+	width: 100%;
+	float: left;
+}
+.mers_tm_title[data-text-align="left"]{text-align: left;}
+.mers_tm_title[data-text-align="center"]{text-align: center;}
+.mers_tm_title[data-text-align="right"]{text-align: right;}
+
+.mers_tm_title span{
+	text-transform: uppercase;
+	color: var(--extra-color);
+	font-size: 16px;
+}
+.mers_tm_title h3{
+	font-size: 60px;
+	font-weight: 400;
+}
+.mers_tm_about .right{
+	width: 50%;
+}
+.mers_tm_about .right .info{
+	width: 100%;
+	float: left;
+}
+.mers_tm_about .right .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 40px;
+	margin-top: 25px;
+	border-bottom: 1px solid rgba(32,32,32,.07);
+	padding-bottom: 20px;
+}
+.mers_tm_about .address{
+	font-size: 32px;
+	color: #988C86;
+	margin-bottom: 22px;
+}
+.mers_tm_about .list{
+	width: 100%;
+	float: left;;
+}
+.mers_tm_about .list ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_about .list ul li{
+	margin: 0px 0px 30px 0px;
+	width: 50%;
+	float: left;
+	padding-left: 30px;
+}
+.mers_tm_about .list ul li:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_about .list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+}
+.mers_tm_about .list ul li .icon{
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+	border-radius: 100%;
+	background-color: var(--extra-color);
+	position: relative;
+}
+.mers_tm_about .list ul li .icon .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 18px;
+	height: 18px;
+	color: #fff;
+}
+.mers_tm_about .list ul li .short span{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.mers_tm_about .list ul li .short{
+	line-height: 1;
+	padding-left: 20px;
+}
+.mers_tm_about .list ul li .short h3{
+	font-size: 20px;
+}
+.mers_tm_about .list ul li .short a{
+	color: #202020;
+}
+.mers_tm_social{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_social ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_social ul li{
+	margin: 0px 0px 30px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 30px;
+}
+.mers_tm_social ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: rgba(223,86,70,.07);
+	padding: 30px 30px 20px 30px;
+	border-radius: 5px;
+}
+.mers_tm_social ul li .title{
+	width: 100%;
+	float: left;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 10px;
+}
+.mers_tm_social ul li .title h3{
+	font-weight: 600;
+	font-size: 20px;
+	padding-left: 15px;
+}
+.mers_tm_social ul li p{
+	margin-bottom: 20px;
+}
+.mers_tm_social ul li .title .svg{
+	width: 30px;
+	height: 30px;
+}
+.arrow_icon{
+	width: 37px;
+	height: 37px;
+	display: inline-block;
+	border-radius: 100%;
+	background-color: #fff;
+	position: relative;
+	box-shadow: 0px 4px 4px #E8E8E8;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.arrow_icon .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.mers_tm_social ul li .list_inner:hover .arrow_icon{
+	background-color: var(--extra-color);
+}
+.mers_tm_social ul li .list_inner:hover .arrow_icon path{
+	fill:#fff;
+}
+.mers_tm_full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+}
+
+/*---------------------------------------------------*/
+/*	06) MERS SERVICE
+/*---------------------------------------------------*/
+
+.mers_tm_service{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #FAFAFA;
+	padding: 111px 0px 90px 0px;
+}
+.mers_tm_service .service_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 47px;
+	border-bottom: 1px solid rgba(32,32,32,.07);
+	padding-bottom: 90px;
+}
+.mers_tm_service .service_list ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_service .service_list ul li{
+	margin: 0px 0px 30px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 30px;
+}
+.mers_tm_service .service_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0,.06);
+	padding: 48px 30px 42px 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_service .service_list ul li .list_inner:hover{
+	box-shadow: 0px 0px 20px rgba(0, 0, 0,.08);
+}
+.mers_tm_service .icon{
+	display: inline-block;
+	margin-bottom: 18px;
+}
+.mers_tm_service .icon .svg{
+	width: 42px;
+	height: 42px;
+	opacity: .2;
+	color: var(--extra-color);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_service .title{
+	font-size: 20px;
+	margin-bottom: 13px;
+}
+.mers_tm_service p{
+	margin-bottom: 20px;
+}
+.mers_tm_service .service_list ul li .list_inner:hover .icon .svg{
+	opacity: 1;
+}
+.mers_tm_service .service_list ul li .list_inner:hover .arrow_icon{
+	background-color: var(--extra-color);
+}
+.mers_tm_service .service_list ul li .list_inner:hover .arrow_icon path{
+	fill:#fff;
+}
+.mers_tm_modalbox{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100vh;
+	z-index: 20;
+	background-color: rgba(0,0,0,.9);
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_modalbox.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.mers_tm_modalbox .box_inner{
+	position: absolute;
+	top: 70px;
+	bottom: 70px;
+	width: 968px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	margin-top: -20px;
+	transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_modalbox.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+.mers_tm_modalbox .close{
+	position: fixed;
+	left: 100%;
+	top: 0px;
+	margin-left: 30px;
+	z-index: 10;
+}
+.mers_tm_modalbox .close a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+	color: #fff;
+	border:2px solid #fff;
+	border-radius: 10px;
+	position: relative;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_modalbox .close a:hover{
+	border-radius: 100%;
+}
+.mers_tm_modalbox .close a i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.mers_tm_modalbox .description_wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 50px;
+	overflow-y: scroll;
+}
+.mers_tm_modalbox .description_wrap:before{
+	position: fixed;
+	content: "";
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #fff;
+	z-index: 2;
+}
+.mers_tm_modalbox .description_wrap:after{
+	position: fixed;
+	content: "";
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #fff;
+	z-index: 2;
+}
+.mers_tm_modalbox .description_wrap::-webkit-scrollbar{
+  width: 11px;
+}
+.mers_tm_modalbox .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+}
+.mers_tm_modalbox .description_wrap:-webkit-scrollbar-track{
+  background: #fff;
+}
+.mers_tm_modalbox .description_wrap::-webkit-scrollbar-thumb{
+  background-color: #999;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.mers_tm_service .popup_service_image{
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	z-index: -111;
+}
+.mers_tm_service .service_hidden_details{
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	z-index: -111;
+}
+.mers_tm_modalbox .service_popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_modalbox .service_popup_informations .image{
+	width: 100%;
+	float: left;
+	position: relative;
+	margin-bottom: 37px;
+}
+.mers_tm_modalbox .service_popup_informations .image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.mers_tm_modalbox .service_popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+.mers_tm_modalbox .service_popup_informations .main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.mers_tm_modalbox .service_popup_informations .main_title h3{
+	font-size: 30px;
+}
+.mers_tm_modalbox .service_popup_informations .descriptions{
+	width: 100%;
+	float: left;
+}
+.mers_tm_modalbox .service_popup_informations .descriptions p{
+	margin-bottom: 15px;
+}
+.mers_tm_modalbox .service_popup_informations .descriptions p:last-child{
+	margin-bottom: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	07) MERS PARTNERS
+/*---------------------------------------------------*/
+
+.mers_tm_partners{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 25px;
+}
+.mers_tm_partners ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_partners ul li{
+	margin: 0px;
+	opacity: .4;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_partners ul li:hover{
+	opacity: 1;
+}
+
+/*---------------------------------------------------*/
+/*	08) MERS PORTFOLIO
+/*---------------------------------------------------*/
+
+.mers_tm_portfolio{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 90px;
+	padding-top: 111px;
+}
+.mers_tm_portfolio .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 107px;
+}
+.mers_tm_portfolio .portfolio_list ul{
+	margin: 0px 0px 0px -130px;
+	list-style-type: none;
+}
+.mers_tm_portfolio .portfolio_list ul li{
+	margin: 0px 0px 23px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 130px;
+}
+.mers_tm_portfolio .portfolio_list ul li:nth-child(3){
+	margin-top: -203px;
+}
+.mers_tm_portfolio .portfolio_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.mers_tm_portfolio .portfolio_list ul li .image{
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 18px;
+	overflow: hidden;
+}
+.mers_tm_portfolio .portfolio_list ul li .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.mers_tm_portfolio .portfolio_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	transform: scale(1) translateZ(0);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_portfolio .portfolio_list ul li .list_inner:hover .main{
+	transform: scale(1.1) translateZ(0);
+}
+.mers_tm_portfolio .portfolio_list .details{
+	width: 100%;
+	float: left;
+}
+.mers_tm_portfolio .portfolio_list .details .title{
+	line-height: 1;
+	margin-bottom: 2px;
+}
+.mers_tm_portfolio .portfolio_list .details .title a{
+	color: #202020;
+	font-size: 20px;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_portfolio .portfolio_list ul li .list_inner:hover .title a{
+	color: var(--extra-color);
+}
+.mers_tm_portfolio .portfolio_list .details .category a{
+	color: #988C86;
+	display: inline-block;
+}
+.mers_tm_portfolio .portfolio_list .animation_link:after{
+	bottom: 3px;
+}
+.mers_tm_portfolio .hidden_content{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.mers_tm_modalbox .popup_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_modalbox .popup_details .top_image{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 37px;
+}
+.mers_tm_modalbox .popup_details .top_image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.mers_tm_modalbox .popup_details .top_image .main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 12px;
+}
+.mers_tm_modalbox .portfolio_main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.mers_tm_modalbox .portfolio_main_title span{
+	display: inline-block;
+	font-family: var(--font-family-extra);
+}
+.mers_tm_modalbox .portfolio_main_title span a{
+	text-decoration: none;
+	color: #6f6b80;
+}
+.mers_tm_modalbox .portfolio_main_title h3{
+    font-size: 30px;
+	margin-bottom: 3px;
+}
+.mers_tm_modalbox .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-bottom: 60px;
+}
+.mers_tm_modalbox .main_details .textbox{
+	width: 70%;
+	padding-right: 40px;
+}
+.mers_tm_modalbox .main_details .textbox p{
+	margin-bottom: 15px;
+}
+.mers_tm_modalbox .main_details .textbox p:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_modalbox .main_details .detailbox{
+	width: 30%;
+	padding-left: 40px;
+}
+.mers_tm_modalbox .main_details .detailbox > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_modalbox .main_details .detailbox > ul > li{
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+	float: left;
+}
+.mers_tm_modalbox .main_details .detailbox > ul > li:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_modalbox .main_details .detailbox .first{
+    font-weight: 500;
+	font-size: 18px;
+	display: block;
+	color: #000;
+	font-family: var(--font-family-extra);
+}
+.mers_tm_modalbox .main_details .detailbox span{
+	font-family: var(--font-family-extra);
+}
+.mers_tm_modalbox .main_details .detailbox span a{
+	text-decoration: none;
+	color: #7d7789;
+}
+.mers_tm_modalbox .additional_images{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_modalbox .additional_images ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_modalbox .additional_images ul li{
+	margin: 0px 0px 30px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 30px;
+}
+.mers_tm_modalbox .additional_images ul li:nth-child(3n-2){
+	width: 100%;
+}
+.mers_tm_modalbox .additional_images ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.mers_tm_modalbox .additional_images ul li .my_image{
+	position: relative;
+}
+.mers_tm_modalbox .additional_images ul li .my_image img{
+	opacity: 0;
+	min-width: 100%;
+}
+.mers_tm_modalbox .additional_images ul li .my_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+
+/*---------------------------------------------------*/
+/*	09) MERS SKILLS
+/*---------------------------------------------------*/
+
+.mers_tm_skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #FAFAFA;
+	padding: 170px 0px 70px 0px;
+}
+.mers_tm_skills .skills_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	border-bottom: 1px solid rgba(32,32,32,.07);
+	padding-bottom: 70px;
+	margin-bottom: 60px;
+}
+.mers_tm_skills .left{
+	width: 50%;
+}
+.mers_tm_skills .left .text{
+	width: 100%;
+	float: left;
+	margin-top: 24px;
+	margin-bottom: 40px;
+}
+.dodo_progress{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	overflow: hidden;
+	max-width: 90%;
+}
+.progress_inner{
+	width:100%;
+	margin-bottom:20px;
+}
+.progress_inner:last-child{
+	margin-bottom: 0px;
+}
+.progress_inner > span{
+	margin:0px 0px 9px 0px;
+	display:block;
+	text-align:left;
+	position: relative;
+}
+.progress_inner span.label{
+	opacity: 0;
+	transform: translateY(10px);
+	display: block;
+	color: #202020;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: var(--font-family-extra);
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.progress_inner span.label.opened{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.progress_inner span.number{
+	float: right;
+	position: absolute;
+	right: 100%;
+	bottom: -8px;
+	transition: all 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	color: #202020;
+	font-size: 14px;
+	font-family: var(--font-family);
+	font-weight: 500;
+}
+.progress_inner .background{
+	background:rgba(152, 140, 134, 0.15);
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:8px;
+	border-radius: 50px;
+}
+.progress_inner .background .bar_in{
+	height:8px;
+	width:0px;
+	overflow:hidden;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	position: relative;
+	top: 0px;
+}
+.progress_inner .background .bar{
+	width:0px;
+	height:100%;
+}
+.progress_inner .background .bar.open{
+	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+
+@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+
+.mers_tm_skills .right{
+	width: 50%;
+	padding-left: 120px;
+	position: relative;
+	top: -50px;
+}
+.mers_tm_skills .right img{
+	min-width: 100%;
+	max-height: 600px;
+}
+.mers_tm_counter_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_counter_section ul{
+	margin: 0px 0px 0px -40px;
+	list-style-type: none;
+}
+.mers_tm_counter_section ul li{
+	margin: 0px 0px 40px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 40px;
+}
+.mers_tm_counter_section ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.mers_tm_counter_section ul li .myCircle{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	position: relative;
+	margin: 0px auto;
+}
+.mers_tm_counter_section ul li .myCircle:before{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	position: relative;
+}
+.arc-wrapper {
+position:relative;
+margin:20px;
+}
+.arc {
+position:absolute;
+top:0;
+left:0;
+width: 150px;
+height: 150px;
+border-radius:100%;
+border:1px solid;
+border: 8px solid;
+border-color: var(--extra-color);
+}
+.arc_start {
+border-color:var(--extra-color)  transparent;
+-webkit-transform: rotate(-30deg);
+-moz-transform: rotate(-30deg);
+-ms-transform: rotate(-30deg);
+-o-transform: rotate(-30deg);
+transform: rotate(-30deg);
+} 
+.arc_end {
+border-color: transparent var(--extra-color) var(--extra-color) var(--extra-color);
+-webkit-transform: rotate(120deg);
+-moz-transform: rotate(120deg);
+-ms-transform: rotate(120deg);
+-o-transform: rotate(120deg);
+transform: rotate(120deg);
+}
+.mers_tm_counter_section .numbers{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 32px;
+	font-weight: 500;
+	color: #202020;
+	max-width: 130px;
+}
+.mers_tm_counter_section .title{
+	max-width: 150px;
+	margin: 0px auto;
+	line-height: 2;
+	margin-top: 11px;
+}
+
+/*---------------------------------------------------*/
+/*	10) MERS PRICING
+/*---------------------------------------------------*/
+
+.mers_tm_pricing{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 111px;
+}
+.mers_tm_pricing .price_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 45px;
+	margin-bottom: 80px;
+}
+.mers_tm_pricing .price_list > ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_pricing .price_list > ul > li{
+	margin: 0px 0px 30px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 30px;
+}
+.mers_tm_pricing .price_list > ul > li > .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	border-radius: 5px;
+	background-color: #FAFAFA;
+	padding: 33px 30px 40px 30px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0,.1);
+}
+.mers_tm_pricing .price{
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 64px;
+	margin-bottom: 8px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_pricing .price_list > ul > li > .list_inner:hover .price{
+	color: var(--extra-color);
+}
+.mers_tm_pricing .price span{
+	position: relative;
+}
+.mers_tm_pricing .price .currency{
+	position: absolute;
+	color: var(--extra-color);
+	font-size: 24px;
+	bottom: 10px;
+	right: -17px;
+}
+.mers_tm_pricing .plan{
+	color: #000;
+	font-size: 24px;
+	margin-bottom: 32px;
+}
+.mers_tm_pricing .item_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 40px;
+}
+.mers_tm_pricing .item_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_pricing .item_list ul li{
+	margin: 0px 0px 18px 0px;
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	padding: 0px 5px 0px 16px;
+}
+.mers_tm_pricing .item_list ul li:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_pricing .item_list ul li i{
+	font-size: 10px;
+}
+.mers_tm_pricing .item_list ul li p{
+	display: flex;
+	align-items: center;
+}
+.mers_tm_pricing .item_list ul li span{
+	display: inline-block;
+	padding-left: 6px;
+}
+.mers_tm_pricing .item_list ul li.inactive p{
+	color: #ddd;
+}
+.mers_tm_pricing .popular{
+	position: absolute;
+	display: inline-block;
+	background-color: var(--extra-color);
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 0px 20px;
+	right: 0px;
+	top: 0px;
+	transform: rotate(-90deg) translate(0, -100%);
+	transform-origin: 100% 0;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.mers_tm_pricing .price_list > ul > li > .list_inner:hover .arrow_icon{
+	background-color: var(--extra-color);
+}
+.mers_tm_pricing .price_list > ul > li > .list_inner:hover .arrow_icon path{
+	fill:#fff;
+}
+
+/*---------------------------------------------------*/
+/*	11) MERS TESTIMONIALS
+/*---------------------------------------------------*/
+
+.mers_tm_testimonials{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-bottom: 100px;
+	z-index: 2;
+}
+.mers_tm_testimonials .testimonials_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	padding-top: 30px;
+	position: relative;
+}
+.mers_tm_testimonials .avatar{
+	width: 30%;
+}
+.mers_tm_testimonials .avatar img{
+	min-width: 100%;
+	max-height: 400px;
+}
+.mers_tm_testimonials .testimonials_list{
+	width: 70%;
+	height: auto;
+	clear: both;
+	padding: 0px 150px 0px 65px;
+}
+.mers_tm_testimonials .testimonials_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_testimonials .testimonials_list ul li{
+	margin: 0px;
+}
+.mers_tm_testimonials .quote{
+	position: absolute;
+	bottom: 60px;
+	right: 90px;
+}
+.mers_tm_testimonials .quote .svg{
+	width: 70px;
+	height: 70px;
+	color: var(--extra-color);
+}
+.mers_tm_testimonials .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.mers_tm_testimonials .text p{
+	font-family: var(--font-family-extra);
+	font-size: 20px;
+	line-height: 2;
+}
+.mers_tm_testimonials .author{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+}
+.mers_tm_testimonials .author .image{
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.mers_tm_testimonials .author .main{
+	position: absolute;
+	top: -4px;
+	bottom: -4px;
+	left: -4px;
+	right: -4px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+	opacity: 0;
+	
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+	
+	transform: scale(1.5) translateZ(0);
+}
+.mers_tm_testimonials .owl-carousel .owl-item.active .author .main{
+	opacity: 1;
+	transition: all 1s .3s ease;
+	transform: scale(1) translateZ(0);
+}
+.mers_tm_testimonials .short{
+	padding-left: 10px;
+	text-align: left;
+}
+.mers_tm_testimonials .short h3{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1;
+	position: relative;
+}
+.mers_tm_testimonials .short .author{
+	font-size: 18px;
+	color: #202020;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.mers_tm_testimonials .short .job{
+	font-weight: 400;
+	display: block;
+	font-size: 14px;
+	font-family: var(--font-family);
+}
+.mers_tm_testimonials .short .job span{
+	color: #988C86;
+}
+.mers_tm_testimonials .short .author span,
+.mers_tm_testimonials .short .job span{
+	position: relative;
+	display: block;
+	padding: 2px 0px;
+	transform: translateY(102%);
+	
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+}
+.mers_tm_testimonials .owl-carousel .owl-item.active .short .author span{
+	transform: translateY(0px);
+	transition-delay: 0.3s;
+}
+.mers_tm_testimonials .owl-carousel .owl-item.active .short .job span{
+	transform: translateY(0px);
+	transition-delay: 0.6s;
+}
+.mers_tm_testimonials .background_stroke_text{
+	position: absolute;
+	bottom: 45px;
+	text-align: center;
+	width: 100%;
+	z-index: -1;
+}
+.mers_tm_testimonials .background_stroke_text h3{
+	font-size: 199px;
+	font-weight: 700;
+	color: transparent;
+	-webkit-text-stroke:1px rgba(152, 140, 134,0.1);
+}
+.mers_tm_testimonials .my_nav{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	right: 0px;
+}
+.mers_tm_testimonials .my_nav a{
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px #E8E8E8;
+	margin-bottom: 10px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_testimonials .my_nav a:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_testimonials .my_nav .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_testimonials .my_nav a:hover .svg path{
+	fill:#fff;
+}
+.mers_tm_testimonials .my_nav a:hover{
+	background-color: var(--extra-color);
+}
+
+/*---------------------------------------------------*/
+/*	12) MERS NEWS
+/*---------------------------------------------------*/
+
+.mers_tm_news{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #FAFAFA;
+	padding: 111px 0px 115px 0px;
+}
+.mers_tm_news .news_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 45px;
+	overflow: hidden;
+	padding: 5px;
+}
+.mers_tm_news .news_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_news .news_list ul li{
+	margin: 0px;
+}
+.mers_tm_news .news_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0,.06);
+}
+.mers_tm_news .news_list ul li .image{
+	position: relative;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+}
+.mers_tm_news .news_list ul li .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.mers_tm_news .news_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	transform: scale(1) translateZ(0);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_news .news_list ul li .image:hover .main{
+	transform: scale(1.1) translateZ(0);
+}
+.mers_tm_news .news_list .details{
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	padding: 23px 30px 25px 30px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.mers_tm_news .news_list .metabox{
+	width: 100%;
+	display: flex;
+	margin-bottom: 6px;
+}
+.mers_tm_news .news_list .metabox span{
+	position: relative;
+	display: inline-block;
+	padding-left: 23px;
+	margin-left: 15px;
+}
+.mers_tm_news .news_list .metabox span:first-child{
+	margin-left: 0px;
+}
+.mers_tm_news .news_list .metabox .svg{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #202020;
+}
+.mers_tm_news .news_list .metabox a{
+	color: #988C86;
+}
+.mers_tm_news .news_list .animation_link:after{
+	bottom: 4px;
+}
+.mers_tm_news .news_list .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.mers_tm_news .news_list .title a{
+	color: #202020;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_news .news_list .title a:hover{
+	color: var(--extra-color);
+}
+.mers_tm_news .news_list .title h3{
+	font-size: 20px;
+	line-height: 1.5;
+}
+.mers_tm_news .mers_tm_title{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.mers_tm_news .news_list .arrow_icon:hover{
+	background-color: var(--extra-color);
+}
+.mers_tm_news .news_list .arrow_icon:hover path{
+	fill:#fff;
+}
+.mers_tm_news .my_nav{
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px #E8E8E8;
+	margin-right: 10px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_news .my_nav:last-child{
+	margin-right: 0px;
+}
+.mers_tm_news .my_nav .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_news .my_nav:hover .svg path{
+	fill:#fff;
+}
+.mers_tm_news .my_nav:hover{
+	background-color: var(--extra-color);
+}
+.mers_tm_news .owl-carousel .owl-stage-outer{
+	overflow: hidden;
+}
+.mers_tm_news .owl-carousel .owl-stage-outer{
+	overflow: visible;
+}
+.mers_tm_news .owl-item.active{
+	opacity: 1;
+}
+.mers_tm_news .owl-item{
+	opacity: 0;
+}
+.mers_tm_news .news_hidden_details{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.mers_tm_modalbox .news_popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.mers_tm_modalbox .news_popup_informations .image{
+	position: relative;
+	margin-bottom: 37px;
+}
+.mers_tm_modalbox .news_popup_informations .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.mers_tm_modalbox .news_popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+.mers_tm_modalbox .news_popup_informations .metabox{
+	width: 100%;
+	display: flex;
+	margin-bottom: 6px;
+}
+.mers_tm_modalbox .news_popup_informations .metabox span{
+	position: relative;
+	display: inline-block;
+	padding-left: 23px;
+	margin-left: 15px;
+}
+.mers_tm_modalbox .news_popup_informations .metabox span:first-child{
+	margin-left: 0px;
+}
+.mers_tm_modalbox .news_popup_informations .metabox .svg{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #F90B0F;
+}
+.mers_tm_modalbox .news_popup_informations .metabox a{
+	color: #988C86;
+}
+.mers_tm_modalbox .news_popup_informations .animation_link:after{
+	bottom: 4px;
+}
+.mers_tm_modalbox .news_popup_informations .details{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.mers_tm_modalbox .news_popup_informations .details span a{
+	text-decoration: none;
+	color: #988c86;
+}
+.mers_tm_modalbox .news_popup_informations .details h3{
+	font-size: 30px;
+}
+.mers_tm_modalbox .news_popup_informations .text{
+	width: 100%;
+	float: left;
+}
+.mers_tm_modalbox .news_popup_informations .text p{
+	margin-bottom: 15px;
+}
+.mers_tm_modalbox .news_popup_informations .text p:last-child{
+	margin-bottom: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	13) MERS CONTACT
+/*---------------------------------------------------*/
+
+.mers_tm_contact{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #202020;
+	padding: 120px 0px 105px 0px;
+}
+.mers_tm_contact .contact_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+.mers_tm_contact .main_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+	padding-bottom: 50px;
+	margin-bottom: 45px;
+}
+.mers_tm_contact .main_title .text{
+	max-width: 80%;
+	padding-right: 30px;
+}
+.mers_tm_contact .main_title .text h3{
+	color: #fff;
+	font-size: 55px;
+	line-height: 1.2;
+	text-transform: capitalize;
+}
+.mers_tm_contact .contact_social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_contact .contact_social ul li{
+	margin: 0px 35px 0px 0px;
+	display: inline-block;
+}
+.mers_tm_contact .contact_social ul li:last-child{
+	margin-right: 0px;
+}
+.mers_tm_contact .contact_social ul li a{
+	text-decoration: none;
+	color: #988C86;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_contact .contact_social ul li a:hover{
+	color: var(--extra-color);
+}
+.mers_tm_contact .contact_social ul li .svg{
+	width: 22px;
+	height: 22px;
+}
+.mers_tm_contact .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+}
+.mers_tm_contact .main_details .fields{
+	width: 50%;
+}
+.mers_tm_contact .input_list{
+	width: 100%;
+	float: left;
+}
+.mers_tm_contact .input_list ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.mers_tm_contact .input_list ul li{
+	margin: 0px 0px 9px 0px;
+	width: 50%;
+	padding-left: 30px;
+	float: left;
+}
+.mers_tm_contact label{
+	display: block;
+	color: #fff;
+	font-weight: 500;
+	margin-bottom: 9px;
+	font-size: 18px;
+}
+.mers_tm_contact .input_list ul li input{
+	width: 100%;
+	background-color: transparent;
+	height: 48px;
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	border-radius: 5px;
+	padding: 20px;
+	color: #fff;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+}
+.mers_tm_contact .input_list ul li input:focus{
+	border: 1px solid rgba(255, 255, 255, .3);
+	outline: none;
+}
+.mers_tm_contact .message_area{
+	width: 100%;
+	float: left;
+	margin-bottom: 50px;
+}
+.mers_tm_contact textarea{
+	width: 100%;
+	background-color: transparent;
+	height: 90px;
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	border-radius: 5px;
+	padding: 20px;
+	color: #fff;
+	resize: none;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+}
+.mers_tm_contact textarea:focus{
+	border: 1px solid rgba(255, 255, 255, .3);
+	outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mers_tm_contact ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #464646;
+}
+.mers_tm_contact :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #464646;
+   opacity:  1;
+}
+.mers_tm_contact ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #464646;
+   opacity:  1;
+}
+.mers_tm_contact :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #464646;
+}
+.mers_tm_contact ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #464646;
+}
+.mers_tm_contact ::placeholder { /* Most modern browsers support this now. */
+   color: #464646;
+}
+.mers_tm_contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_contact .returnmessage{
+	color:#5280FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+.mers_tm_contact .main_details .infos{
+	width: 50%;
+	padding-left: 200px;
+}
+.mers_tm_contact .address{
+	width: 100%;
+	float: left;
+	margin-bottom: 50px;
+}
+.mers_tm_contact .address h3{
+	font-size: 32px;
+	color: #988C86;
+}
+.mers_tm_contact .main_details .infos .list{
+	width: 100%;
+	float: left;;
+	margin-bottom: 120px;
+}
+.mers_tm_contact .main_details .infos .list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mers_tm_contact .main_details .infos .list ul li{
+	margin: 0px 0px 30px 0px;
+	width: 100%;
+	float: left;
+}
+.mers_tm_contact .main_details .infos .list ul li:last-child{
+	margin-bottom: 0px;
+}
+.mers_tm_contact .main_details .infos .list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+}
+.mers_tm_contact .main_details .infos .list ul li .icon{
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+	border-radius: 100%;
+	background-color: var(--extra-color);
+	position: relative;
+}
+.mers_tm_contact .main_details .infos .list ul li .icon .svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 18px;
+	height: 18px;
+	color: #fff;
+}
+.mers_tm_contact .main_details .infos .list ul li .short span{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.mers_tm_contact .main_details .infos .list ul li .short{
+	line-height: 1;
+	padding-left: 20px;
+}
+.mers_tm_contact .main_details .infos .list ul li .short h3{
+	font-size: 20px;
+	color: #fff;
+}
+.mers_tm_contact .main_details .infos .list ul li .short a{
+	color: #fff;
+}
+.mers_tm_contact .copyright{
+	width: 100%;
+	float: left;
+	line-height: 1.9;
+}
+.mers_tm_contact .copyright a{
+	text-decoration: none;
+	color: var(--extra-color);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.mers_tm_contact .copyright a:hover{
+	color: #fff;
+}
+.mers_tm_contact .background_image{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 0;
+}
+.animation_link{
+	display: inline-block;
+	position: relative;
+}
+.animation_link:after{
+	content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0px;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+.animation_link:hover:after{
+	width:100%;
+	left:0;
+	right:auto;
+}
+
+/*---------------------------------------------------*/
+/*	14) MERS MAGIC CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.cursor-inner {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  z-index: 100;
+  background-color: var(--extra-color);
+  -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+}
+.cursor-inner.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--extra-color);
+  opacity: .3;
+}
+.cursor-outer {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--extra-color);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100;
+  opacity: .5;
+  -webkit-transition: all .08s ease-out;
+  transition: all .08s ease-out;
+}
+.cursor-outer.cursor-hover{opacity: 0;}
+.mers_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1111;
+}
+
+/*---------------------------------------------------*/
+/*	MERS GLITCH EFFECT
+/*---------------------------------------------------*/
+
+.mers_tm_hero .glitch_wrap{
+	position: relative;
+	width: 100%;
+	height:100%;
+	float: left;
+	overflow: hidden;
+}
+.glitch{
+	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+	top: 0;
+ 	left: 0;
+	background-image: url("..//img/hero/1.jpg");
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: center;
+	z-index: -1 !important;
+	opacity: 1;
+	transform: scale(1);
+}
+
+/*---------------------------------------------------*/
+/*	15) MERS MEDIA QUERIES (FOR SMALL DEVIVES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1600px) {
+	.container{max-width:1150px;}
+	body{line-height: 26px;}
+	.mers_tm_leftpart{width: 250px;}
+	.mers_tm_rightpart{padding-left: 250px;}
+	.mers_tm_hero .hello{font-size: 23px;}
+	.mers_tm_hero .name{font-size: 70px;}
+	.mers_tm_hero .text{font-size: 25px;margin-bottom: 40px;}
+	.mers_tm_button a{font-size: 16px;padding: 15px 25px 15px 40px;}
+	.mers_tm_button .icon{margin-left: 15px;width: 33px;height: 33px;}
+	.mers_tm_button .icon .svg{width: 25px;height: 25px;margin-top: 2px;margin-left: 0px;}
+	.mers_tm_down svg{width: 38px !important;height: 38px !important;}
+	.mers_tm_title span{font-size: 14px;}
+	.mers_tm_title h3{font-size: 45px;}
+	.mers_tm_about .right .text{margin-top: 20px;margin-bottom: 30px;}
+	.mers_tm_about .address{font-size: 26px;}
+	.mers_tm_about .list ul li .short h3{font-size: 17px;}
+	.mers_tm_about .list ul{column-rule-width: -20px;}
+	.mers_tm_about .list ul li{padding-left: 20px;}
+	.mers_tm_about .list ul li .short{padding-left: 15px;}
+	.mers_tm_social ul li .title .svg{width: 27px;height: 27px;}
+	.mers_tm_social ul li .title h3{font-size: 17px;padding-left: 12px;}
+	.mers_tm_service .title{font-size: 18px;}
+	.mers_tm_service .icon{margin-bottom: 15px;}
+	.mers_tm_service .icon .svg{width: 35px;height: 35px;}
+	.mers_tm_social ul li .list_inner{padding: 30px 27px 20px 27px;}
+	.mers_tm_portfolio .portfolio_list ul{margin-left: -100px;}
+	.mers_tm_portfolio .portfolio_list ul li{padding-left: 100px;}
+	.mers_tm_portfolio .portfolio_list ul li .image{margin-bottom: 15px;}
+	.mers_tm_skills .left .text{margin-bottom: 35px;}
+	.progress_inner{margin-bottom: 15px;}
+	.progress_inner > span{margin-bottom: 6px;}
+	.mers_tm_skills .right{padding-left: 90px;}
+	.mers_tm_pricing .plan{font-size: 21px;}
+	.mers_tm_pricing .price{font-size: 60px;}
+	.mers_tm_pricing .price_list > ul > li > .list_inner{padding: 33px 20px 40px 20px;}
+	.mers_tm_pricing .item_list ul li{padding: 0px 5px;}
+	.mers_tm_pricing .item_list ul li{margin-bottom: 15px;}
+	.mers_tm_testimonials .text p{font-size: 17px;}
+	.mers_tm_testimonials .background_stroke_text{display: none;}
+	.mers_tm_news .news_list .title h3{font-size: 18px;}
+	.mers_tm_contact .main_title .text h3{font-size: 45px;}
+	.mers_tm_contact .contact_social ul li{margin-right: 25px;}
+	.mers_tm_contact .contact_social ul li .svg{width: 19px;height: 19px;}
+	.mers_tm_contact .address h3{font-size: 26px;}
+	.mers_tm_contact .main_details .infos .list ul li .short h3{font-size: 17px;}
+	.mers_tm_contact label{font-size: 16px;}
+	.mers_tm_modalbox .box_inner{width: 800px;top: 50px;bottom: 50px;}
+	.mers_tm_modalbox .description_wrap{padding: 35px;}
+	.mers_tm_modalbox .description_wrap:before{height: 35px;}
+	.mers_tm_modalbox .description_wrap:after{height: 35px;}
+	.mers_tm_modalbox .service_popup_informations .image{margin-bottom: 30px;}
+	.mers_tm_modalbox .service_popup_informations .main_title h3{font-size: 25px;}
+	.mers_tm_modalbox .service_popup_informations .main_title{margin-bottom: 16px;}
+	.mers_tm_modalbox .popup_details .top_image{margin-bottom: 30px;}
+	.mers_tm_modalbox .portfolio_main_title h3{font-size: 25px;}
+	.mers_tm_modalbox .portfolio_main_title{margin-bottom: 16px;}
+	.mers_tm_modalbox .main_details .detailbox .first{font-size: 16px;}
+	.mers_tm_modalbox .news_popup_informations .details h3{font-size: 25px;}
+	.mers_tm_modalbox .news_popup_informations .image{margin-bottom: 30px;}
+	.mers_tm_modalbox .news_popup_informations .details{margin-bottom: 16px;}
+	.mers_tm_leftpart .logo{margin-bottom: 50px;}
+	.mers_tm_leftpart .menu ul li{margin-bottom: 14px;}
+	.mers_tm_leftpart .leftpart_inner{padding: 25px;}
+	.mers_tm_leftpart .subscribe_wrap{padding-top: 30px;}
+	.mers_tm_leftpart .subscribe_wrap .title h3{font-size: 18px;}
+	.mers_tm_leftpart .subscribe_wrap .title{margin-bottom: 12px;}
+	.mers_tm_leftpart .copyright{bottom: 25px;}
+}
+@media (max-width: 1040px) {
+	.container{padding: 0px 20px;}
+	.mouse-cursor{display: none;}
+	.mers_tm_mobile_menu{display: block;}
+	.mers_tm_leftpart{display: none;}
+	.mers_tm_rightpart{padding-left: 0px;}
+	.mers_tm_about .about_inner{flex-direction: column;}
+	.mers_tm_about .left{width: 100%;padding-left: 0px;margin-bottom: 50px;}
+	.mers_tm_about .right{width: 100%;}
+	.mers_tm_title h3{font-size: 35px;}
+	.mers_tm_social ul li{width: 50%;}
+	.mers_tm_service .service_list ul li{width: 50%;}
+	.mers_tm_portfolio .portfolio_list ul{margin-left: -40px;}
+	.mers_tm_portfolio .portfolio_list ul li{padding-left: 40px;width: 50%;}
+	.mers_tm_portfolio .portfolio_list ul li:nth-child(3){margin-top: 0px;}
+	.mers_tm_skills{padding-top: 115px;}
+	.mers_tm_skills .skills_inner{flex-direction: column;}
+	.mers_tm_skills .left{width: 100%;margin-bottom: 50px;}
+	.mers_tm_skills .right{width: 100%;top: 0px;padding: 0px;}
+	.mers_tm_counter_section ul li .myCircle{width: 120px;height: 120px;}
+	.arc{width: 120px;height: 120px;}
+	.mers_tm_counter_section .numbers{font-size: 25px;}
+	.mers_tm_pricing .price_list > ul > li{width: 50%;}
+	.mers_tm_pricing .price{font-size: 50px;}
+	.mers_tm_pricing .price .currency{font-size: 19px;right: -14px;bottom: 8px;}
+	.mers_tm_testimonials .text p{font-size: 15px;}
+	.mers_tm_testimonials .testimonials_list{width: 100%;padding:0px;}
+	.mers_tm_testimonials .avatar{display: none;}
+	.mers_tm_testimonials .quote{display: none;}
+	.mers_tm_testimonials .my_nav{display: none;}
+	.mers_tm_contact .main_title{flex-direction: column;align-items: baseline;}
+	.mers_tm_contact .main_title .text h3{font-size: 35px;}
+	.mers_tm_contact .main_title .text{padding-right: 0px;max-width: 100%;margin-bottom: 30px;}
+	.mers_tm_contact .contact_social ul li{margin-right: 15px;}
+	.mers_tm_contact .main_details{flex-direction: column;}
+	.mers_tm_contact .main_details .fields{width: 100%;margin-bottom: 50px;}
+	.mers_tm_contact .main_details .infos{width: 100%;padding-left: 0px;}
+	.mers_tm_contact .main_details .infos .list{margin-bottom: 90px;}
+	.mers_tm_modalbox .box_inner{width: 500px;}
+	.mers_tm_modalbox .description_wrap{padding: 20px;}
+	.mers_tm_modalbox .description_wrap:after{height: 20px;}
+	.mers_tm_modalbox .description_wrap:before{height: 20px;}
+	.mers_tm_modalbox .portfolio_main_title h3{font-size: 20px;}
+	.mers_tm_modalbox .main_details{flex-direction: column;}
+	.mers_tm_modalbox .main_details .textbox{padding: 0px;width: 100%;margin-bottom: 40px;}
+	.mers_tm_modalbox .main_details .detailbox{width: 100%;padding: 0px;}
+	.mers_tm_modalbox .additional_images ul{margin: 0px;}
+	.mers_tm_modalbox .additional_images ul li{width: 100% !important;padding-left: 0px;}
+	.mers_tm_modalbox .popup_details .top_image{margin-bottom: 25px;}
+	.mers_tm_modalbox .portfolio_main_title{margin-bottom: 11px;}
+	.mers_tm_modalbox .service_popup_informations .image{margin-bottom: 25px;}
+	.mers_tm_modalbox .service_popup_informations .main_title h3{font-size: 20px;}
+	.mers_tm_modalbox .service_popup_informations .main_title{margin-bottom: 11px;}
+	.mers_tm_modalbox .news_popup_informations .image{margin-bottom: 25px;}
+	.mers_tm_modalbox .news_popup_informations .details h3{font-size: 20px;}
+	.mers_tm_modalbox .news_popup_informations .details{margin-bottom: 11px;}
+}
+@media (max-width: 768px) {
+	.mers_tm_hero .hello{font-size: 17px;}
+	.mers_tm_hero .name{font-size: 40px;}
+	.mers_tm_hero .text{font-size: 16px;margin-bottom: 30px;}
+	.mers_tm_button a{font-size: 14px;padding: 10px 20px 10px 30px;}
+	.mers_tm_down svg{width: 25px;height: 25px;}
+	.mers_tm_title h3{font-size: 28px;}
+	.mers_tm_about .address{font-size: 21px;}
+	.mers_tm_about .list ul{margin: 0px;}
+	.mers_tm_about .list ul li{width: 100%;padding-left: 0px;margin-bottom: 15px;}
+	.mers_tm_social ul{margin: 0px;}
+	.mers_tm_social ul li{width: 100%;padding-left: 0px;}
+	.mers_tm_service .service_list ul{margin: 0px;}
+	.mers_tm_service .service_list ul li{width: 100%;padding-left: 0px;}
+	.mers_tm_portfolio .portfolio_list ul{margin: 0px;}
+	.mers_tm_portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
+	.mers_tm_counter_section ul{margin-left: -20px}
+	.mers_tm_counter_section ul li{width: 50%;padding-left: 20px;}
+	.mers_tm_pricing .price_list > ul{margin: 0px;}
+	.mers_tm_pricing .price_list > ul > li{width: 100%;padding-left: 0px;}
+	.mers_tm_testimonials .text p{font-size: 14px;}
+	.mers_tm_contact .main_title .text h3{font-size: 28px;}
+	.mers_tm_contact .input_list ul{margin: 0px;}
+	.mers_tm_contact .input_list ul li{width: 100%;padding-left: 0px;}
+	.mers_tm_contact .message_area{margin-bottom: 30px;}
+	.mers_tm_contact .main_details .infos .list ul li{margin-bottom: 15px;}
+	.mers_tm_contact .address h3{font-size: 21px;}
+	.mers_tm_contact .address{margin-bottom: 30px;}
+	.mers_tm_contact .main_details .infos .list{margin-bottom: 60px;}
+	.mers_tm_modalbox .box_inner{width: 300px;}
+	.mers_tm_modalbox .close{left: auto;margin-left: 0px;right: 0px;top: -35px;}
+	.mers_tm_modalbox .close a{width: 25px;height: 25px;}
+	.mers_tm_modalbox .box_inner{top: 60px;}
+	.mers_tm_news .navs{display: none;}
+	.mers_tm_testimonials .my_nav{display: none;}
+}
